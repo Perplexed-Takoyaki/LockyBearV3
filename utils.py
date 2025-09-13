@@ -3,7 +3,8 @@ from cryptography.fernet import Fernet
 from encryptor import encrypt, decrypt
 
 #master_key = Fernet.generate_key()
-master_key = b'5cjCktJAHe6eKeAROM6XIcauJR8VXM36Hv82oKxYNzk='
+f = open("master_key", "rb")
+master_key = f.read()
 
 def save_password(entity_name, password):
     file = entity_name + ".passwd"
